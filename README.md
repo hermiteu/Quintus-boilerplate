@@ -34,7 +34,7 @@ Todo
 ----
 
 * Install https://github.com/cykod/Spriter locally
-* Switch to Stylus/Nib or Sass/Bourbon to remove Ruby/Compass dependency and gain speed
+* Switch to Stylus/Nib or libsass/Bourbon/Neat to remove Ruby/Compass dependency and gain speed
 * Install/update Quintus as a Bower component
 * Improve documentation
 * turn into Yeoman generator when Yeoman gets out of beta
