@@ -24,7 +24,7 @@ Steps:
 
 This is a working prototype, it has only been tested on OS X Mountain Lion. Please submit your reports if there are problems on other OS'es.
 
-To use Compass you need to install the Ruby gem.
+To use Compass you need to install the Ruby gem. Just remove the .sass files and create main.css to use plain CSS.
 
 Deployment
 ----------
