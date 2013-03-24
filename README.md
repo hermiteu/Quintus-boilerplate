@@ -40,3 +40,4 @@ Todo
 * turn into Yeoman generator when Yeoman gets out of beta
 * look into responsive/scaling canvas
 * automatic favicon generation in different sizes
+* handlebar templates / partials / when grunt-handlebars-static becomes stable
