@@ -1,0 +1,140 @@
+/* design as background
+ * comment this part out when you're ready  
+ */
+
+// body
+  //background: url('images/design.png')
+  // background-position: center 0px
+  // background-repeat: no-repeat
+  // opacity: 1.0
+  
+/* opaqify elements while aligning with design background
+ */
+//#div, nav, header, article, footer, ul, li, span
+  //opacity: 0.7
+
+/* end design as background
+ * comment this part out when you're ready
+ */   
+
+@import base
+
+html, body
+  background-color: $bodyBgColor
+  color: $baseFontColor
+  font-weight: normal
+  font-stretch: normal
+  height: 100%
+
+body
+  margin-top: 0px
+  -webkit-font-smoothing: subpixel-antialiased
+  
+#page
+  +container($mlHandheld, $mlTablet, $mlDesktop, $mlWidescreen)
+  //+susy-grid-background
+  padding-top: 3px
+  padding-bottom: 20px
+  margin-top: 10px
+  
+  +at-breakpoint($mlDesktop)
+    border:
+      width: 1px 1px 1px 1px
+      style: solid
+      color: #E4E4E4
+
+ 
+#branding
+  +span-columns(17 omega, 17)
+  border: 0px 1px 0px 1px solid #E4E4E4
+  position: relative
+  top: 0px  
+  border-bottom: 1px solid #E4E4E4
+  
+#logo
+  +prefix(1)
+  
+  h1
+    +common-sprite(logo)
+    +ir
+    width: 90px
+    height: 103px
+    border: 0 none
+    margin-bottom: 2px
+
+
+/* main content */
+
+#main
+  clear: both
+  +span-columns(17 omega, 17)
+  position: relative
+  +at-breakpoint($mlDesktop)
+    margin-bottom: 10px
+  
+  h1
+    color: #bc0f1a
+    font-weight: normal
+    font-size: 14px
+  h2
+    font-weight: bold
+    line-height: normal
+    margin-bottom: 0
+    color: #3D4E65 
+    font-size: 16px
+  p
+    //letter-spacing: 0.40px
+  .continue_reading_link, .read_more
+    color: #bc0f1a
+    text-decoration: underline
+    .right_arrow 
+      display: none 
+  
+#content
+  +prefix(1)
+  +at-breakpoint($mlDesktop)
+    +span-columns(11 alpha, 17)
+    +suffix(1) 
+    
+  #loading
+    margin: 50px auto
+    max-width: 1024px
+    position: fixed
+    width: 100%
+    height: 100%
+    text-align: center
+
+  #loading_container
+    position: relative
+    margin: 0 auto
+    width: 50%
+    height: 20px
+    border: 1px solid black
+    text-align: center
+    padding-top: 10px
+
+  #loading_progress
+    width: 0%
+    background-color: red
+    position: absolute
+    height: 30px
+    top: 0px
+    left: 0px
+    opacity: 0.4    
+    
+  /* quintus container */  
+  #quintus_container
+
+
+#sidebar_primary
+  +prefix(1)
+  +at-breakpoint($mlDesktop)
+    +prefix(0)
+    +span-columns(4 omega, 17)
+
+#footer
+  clear: both
+  border-top: 1px solid #E4E4E4
+  height: 20px
+  +prefix(1)
+

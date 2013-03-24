@@ -1,0 +1,140 @@
+/*
+ * 
+ * Based on Bootstrap. Copyright 2011 Twitter, Inc.
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * modifications copyright 2012 - 2013 Herman Boomsma under the same license
+
+=annotation
+  color: #666
+  font-family: $copyFont
+
+=font-short($weight: normal, $size: 12px, $lineHeight: 18px)
+  font-size: toEm($size)
+  font-weight: $weight
+  line-height: toEm($lineHeight)
+
+=sans-serif-font($weight: normal, $size: 14px, $lineHeight: 20px)
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: $size
+  font-weight: $weight
+  line-height: $lineHeight
+
+=serif-font($weight: normal, $size: 14px, $lineHeight: 20px)
+  font-family: "Georgia", Times New Roman, Times, serif
+  font-size: $size
+  font-weight: $weight
+  line-height: $lineHeight
+
+=monospace-font($weight: normal, $size: 12px, $lineHeight: 20px)
+  font-family: "Monaco", Courier New, monospace
+  font-size: $size
+  font-weight: $weight
+  line-height: $lineHeight
+
+=buttonBasicStyle($color, $textColor, $textShadow, $fontSize)
+  border-top: 1px solid #fed54d
+  $shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.25)
+  font-weight: 400
+  font-family: $headingFont
+  display: inline-block
+  +verticalGradient($color, darken(saturate($color, 10), 10))
+  padding: 8px 16px
+  text-shadow: $textShadow
+  color: $textColor
+  font-size: $fontSize
+  line-height: 20px
+  +border-radius(6px)
+  +box-shadow($shadow)
+  &:hover
+    //background-position: 0 -15px;
+    +verticalGradient(saturate($color, 5), $color)
+    color: $textColor
+    text-decoration: none
+
+$grayDark: lighten($black, 25%)
+$gray: lighten($black, 50%)
+$grayLight: lighten($black, 75%)
+$grayLighter: lighten($black, 90%)
+
+=arrowDown($arrowWidth: 5px, $arrowColor: black)
+  bottom: 0
+  left: 50%
+  margin-left: -$arrowWidth
+  border-left: $arrowWidth solid transparent
+  border-right: $arrowWidth solid transparent
+  border-top: $arrowWidth solid $arrowColor
+
+=arrowRight($arrowWidth: 5px, $arrowColor: black)
+  top: 50%
+  right: 0
+  margin-top: -$arrowWidth
+  border-top: $arrowWidth solid transparent
+  border-bottom: $arrowWidth solid transparent
+  border-left: $arrowWidth solid $arrowColor
+
+=arrowUp($arrowWidth: 5px, $arrowColor: black)
+  top: 0
+  left: 50%
+  margin-left: -$arrowWidth
+  border-left: $arrowWidth solid transparent
+  border-right: $arrowWidth solid transparent
+  border-bottom: $arrowWidth solid $arrowColor
+
+=arrowLeft($arrowWidth: 5px, $arrowColor: black)
+  top: 50%
+  left: 0
+  margin-top: -$arrowWidth
+  border-top: $arrowWidth solid transparent
+  border-bottom: $arrowWidth solid transparent
+  border-right: $arrowWidth solid $arrowColor
+
+
+=button
+  cursor: pointer !important
+  +border-radius(6px)
+  display: inline-block
+  color: #ffffff
+  font-family: $headingFont
+  font-size: 16px
+  font-weight: normal
+  padding: 10px 17px
+  text-decoration: none
+  text-Highlight: 1px 1px 0px #5c5c5c
+
+=primaryButton
+  +button
+  +gradientSet($primaryGradientTop, $primaryGradientBottom)
+  border: 1px solid $primaryGradientShadow
+  -moz-box-Highlight: inset 0px 1px 0px 0px $primaryGradientHighlight
+  -webkit-box-Highlight: inset 0px 1px 0px 0px $primaryGradientHighlight
+  box-Highlight: inset 0px 1px 0px 0px $primaryGradientHighlight
+  &:hover
+    +gradientSet($primaryGradientTopOver, $primaryGradientBottomOver)
+  &:active
+    +gradientSet($primaryGradientTopActive, $primaryGradientBottomActive)
+
+=secondaryButton
+  +button
+  +gradientSet($secondaryGradientTop, $secondaryGradientBottom)
+  border: 1px solid $secondaryGradientShadow
+  -moz-box-Highlight: inset 0px 1px 0px 0px $secondaryGradientHighlight
+  -webkit-box-Highlight: inset 0px 1px 0px 0px $secondaryGradientHighlight
+  box-Highlight: inset 0px 1px 0px 0px $secondaryGradientHighlight
+  &:hover
+    +gradientSet($secondaryGradientTopOver, $secondaryGradientBottomOver)
+  &:active
+    +gradientSet($secondaryGradientTopActive, $secondaryGradientBottomActive)
+
+=neutralButton
+  +button
+  +gradientSet($neutralGradientTop, $neutralGradientBottom)
+  border: 1px solid $neutralGradientShadow
+  -moz-box-Highlight: inset 0px 1px 0px 0px $neutralGradientHighlight
+  -webkit-box-Highlight: inset 0px 1px 0px 0px $neutralGradientHighlight
+  box-Highlight: inset 0px 1px 0px 0px $neutralGradientHighlight
+  &:hover
+    +gradientSet($neutralGradientTopOver, $neutralGradientBottomOver)
+  &:active
+    +gradientSet($neutralGradientTopActive, $neutralGradientBottomActive)
+  

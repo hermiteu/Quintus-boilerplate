@@ -1,0 +1,145 @@
+/*
+ * 
+ * Based on Bootstrap. Copyright 2011 Twitter, Inc.
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * modifications copyright 2012 - 2013 Herman Boomsma under the same license
+
+//http://compass-style.org/reference/compass/css3/
+@import "compass/css3"
+@import compass/typography/text/replacement
+//for ie6 compatible min-height, etc
+@import compass/utilities/general/min 
+
+// Helpers
+// ------------
+
+=clearfix
+  *zoom: 1
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+.wrapper
+  position: relative
+  +min-height(100%)
+  +clearfix
+  
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+ *www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden
+=visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638
+  &.focusable
+    &:active, &:focus
+      clip: auto
+      height: auto
+      margin: 0
+      overflow: visible
+      position: static
+      width: auto
+
+// Input placeholder text -> markdotto/Preboot.less
+// TODO: add polyfill styling
+=placeholder($color: $grayLight)
+  \:-moz-placeholder
+    color: $color
+  \::-webkit-input-placeholder
+    color: $color
+    
+.screen-reader-text, .assistive-text
+  +visuallyhidden
+    
+/* For image replacement
+=ir
+  // display: block; 
+  // background-repeat: no-repeat; 
+  // text-align: left;
+  direction: ltr
+  color: transparent
+  +hide-text
+
+/* Hide for both screenreaders and browsers:
+ * css-discuss.incutio.com/wiki/Screenreader_Visibility
+=hidden
+  display: none
+  visibility: hidden    
+  
+@function toEm($pixels)
+  @return pxToEm($pixels)
+
+@function pxToEm($pixels)
+  @return $pixels / $baseFontSize * 1em
+
+@function pxToPt($pixels)
+  @return $pixels * 96 / 72
+
+@function ptToPx($points)
+  @return $points / 96 * 72
+
+//usage
+//@include firefoxOnly() { margin-top: 3px; }
+=firefoxOnly
+  /* firefox fixes
+  @-moz-document url-prefix()
+    @content
+
+=forceScrollbar
+  // 1) Always force a scrollbar in non-IE 
+  // 2) Remove iOS text size adjust without disabling user zoom:
+  //    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+  overflow-y: scroll
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+// Gradient Bar Colors for buttons and allerts
+=gradientBar($primaryColor, $secondaryColor)
+  +verticalGradient($primaryColor, $secondaryColor)
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+  border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%)
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%)
+
+=verticalGradient($startColor, $endColor)
+  // ie filter gradient
+  // you should place this before any background-image properties that you have specified.
+  +filter-gradient($startColor, $endColor, vertical)
+  +background-image(linear-gradient($startColor, $endColor))
+
+=horizontalGradient($startColor, $endColor)
+  // ie filter gradient
+  // you should place this before any background-image properties that you have specified.
+  +filter-gradient($startColor, $endColor, horizontal)
+  +background-image(linear-gradient(left, $startColor, $endColor))
+
+=verticalThreeColorGradient($startColor, $midColor, $colorStop, $endColor)
+  +background-image(linear-gradient($startColor, $midColor $colorStop, $endColor))
+
+//backup, right now compass's version is used
+=ie-linear-gradient($start-color, $end-color)
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start-color}', endColorstr='#{$end-color}')
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start-color}', endColorstr='#{$end-color}')"
+
+=resetFilter
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)"  
+  
+// Reset filters for IE
+=reset-filter
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
+  
+// Add an alphatransparency value to any background or border color (via Elyse Holladay) -> markdotto/Preboot.less
+=translucentBackground($color: $white, $alpha: 1)
+  background-color: hsla(hue($color), saturation($color), lightness($color), $alpha)
+
+=translucentBorder($color: $white, $alpha: 1)
+  border-color: hsla(hue($color), saturation($color), lightness($color), $alpha)
+  background-clip: padding-box  

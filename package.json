@@ -1,0 +1,32 @@
+{
+  "name": "quintus-boilerplate",
+  "version": "0.1.0",
+  "description": "Template based on Yeoman's web app template. Comes with Sass & Susy, compass sprites, LiveReload, optional Coffeescript. Clone the repo, enter the directory, run 'npm install', run 'grunt server', check out the game in your browser. This is a working prototype, it has only been tested on OS X Mountain Lion. Please submit your reports if there are problems on other OS'es.",
+  "keywords": "Quintus, game, h5bp",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-coffee": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-compass": "~0.1.2",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-connect": "0.1.2",
+    "grunt-contrib-clean": "0.4.0",
+    "grunt-contrib-htmlmin": "0.1.1",
+    "grunt-contrib-imagemin": "0.1.2",
+    "grunt-contrib-livereload": "0.1.1",
+    "grunt-bower-hooks": "~0.2.0",
+    "grunt-usemin": "~0.1.9",
+    "grunt-regarde": "~0.1.1",
+    "grunt-mocha": "~0.2.2",
+    "grunt-open": "~0.2.0",
+    "matchdep": "~0.1.1",
+    "phantomjs": "~1.8"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

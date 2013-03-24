@@ -1,0 +1,109 @@
+
+/* form styling, needs some more work */
+/* based on blueprint forms code 
+  Copyright (c) 2007 - 2010 blueprintcss.org
+  https://github.com/joshuaclayton/blueprint-css/blob/master/LICENSE
+  modifications copyright 2012 - 2013 Herman Boomsma under the same license
+
+LABEL
+  &.left
+    margin: 10px 0 4px 0
+    font-weight: bold
+    display: inline-block
+    line-height: 1.3em
+    clear: both
+    color: $linkColor
+  &.right  
+    font-size: 11px
+    padding: 10px 0 0 0
+    width: 99.8%    
+    
+LEGEND
+  margin-top: 0
+  margin-bottom: 0    
+
+FIELDSET
+  padding: 0 1.4em 1.4em
+  margin: 0 0 1.5em
+  border: none
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+  +border-radius(4px)
+  padding-top: 1.4em
+  
+FIELDSET LEGEND
+  font-weight: normal
+  padding: 0 11px 10px  
+  
+form > fieldset
+  padding: 0
+  margin: 0
+  
+  &>div
+    padding: 4px 0 8px 0  
+
+#IE8#HACK
+  padding-top: 1.4em
+
+INPUT
+  &[type=text], &[type=password], &[type=url], &[type=email], &.text, &.email
+    background-color: #FFF
+    border: 1px solid #BBB
+    border: 1px solid #ddd
+    height: 20px
+    color: #000
+    +border-radius(4px)
+    color: black
+    border: 1px solid #BBB
+    padding: 2px 0 2px 0
+    margin: .5em 0    
+    width: 47%     
+    
+    &:focus
+      color: #373737  
+      border-color: #666
+
+TEXTAREA
+  background-color: #FFF
+  border: 1px solid #BBB
+  +border-radius(4px)
+  height: 150px
+  color: #000
+  //+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.1))
+  border: 1px solid #ddd
+  padding-left: 3px
+  width: 98%
+  padding: 5px
+  &:focus
+    border-color: #666
+    color: #373737
+     
+
+SELECT
+  background-color: #FFF
+  border-width: 1px
+  border-style: solid
+  +border-radius(4px)
+  margin: 0.5em 0
+  width: 47.5%
+ 
+  
+INPUT.file
+  font-size: 11px
+  width: 47%
+  border: none
+
+/* submit/reset button container */
+.Actions
+  padding: 16px 0 10px 0
+  margin: 16px 0 0 0
+  clear: both
+
+FORM
+  BUTTON, INPUT.button
+    position: relative
+    top: 0.25em
+
+
+FORM.inline
+  line-height: 3  

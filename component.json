@@ -1,0 +1,12 @@
+{
+  "name": "quintus-boilerplate",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "zepto": "~1.0.0rc1",
+    "html5shiv": "~3.6.2",
+    "underscore": "~1.4.4",
+    "selectivizr": "~1.0.2"
+  },
+  "devDependencies": {}
+}

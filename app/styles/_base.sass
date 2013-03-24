@@ -1,0 +1,93 @@
+
+//theme config
+@import config
+
+//import fonts here
+
+//http://fontface.codeandmore.com/index.php font-face generator that just works
+
+//base
+@import base/normalize
+@import base/mixins
+@import base/helpers
+@import typography
+@import susy
+@import base/forms
+@import base/tables
+@import compass/utilities
+@import sprite/common/*.png
+//@import "sprite/glyph_used/*.png";   
+//@import "sprites/mobile/*.png";
+
+
+
+html, body
+  position: relative
+  +min-height(100%)
+  width: 100%
+  z-index: 1
+  padding: 0
+  margin: 0
+  //overflow-y: scroll!important;
+
+  
+/* fluid images
+ * doesn't take Susy take care of this already?
+ */
+
+IMG, EMBED, OBJECT, VIDEO, IFRAME
+  max-width: 100%
+
+.content-container
+  IMG, EMBED, OBJECT, VIDEO, IFRAME
+    max-width: 97.5%
+    
+.content-container
+  IMG
+    &.left, &.leftAlone, &.center, &.right, &.rightAlone
+      max-width: 97.5%
+
+.ie6
+  IMG, EMBED, OBJECT, VIDEO, IFRAME
+    width: 100%
+    
+
+/**
+ *   this is mainly for reference as this can be mixed in in the declaration
+ * 
+
+// THE ACTUAL RESPINSIVENESS
+// -----------
+
+/* mixed mobile first and responsive approach
+//@media (max-width: 450px) // large vertical phone styles
+
+/* 480px
+//@media only screen and (min-width: 480px) /* Style adjustments for viewports 480px and over go here */
+
+/*  iPhone
+//only screen and (max-device-width: 480px)
+
+/* 600px
+//@media only screen and (min-width: 600px)
+
+/* 768px
+//@media only screen and (min-width: 768px)
+
+/* 992px
+//@media only screen and (min-width: 992px)
+
+/* 1382px //-> text zooms might be helpful from this size
+//@media only screen and (min-width: 1382px)
+
+/* iPad
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+/* == iPad/iPhone [portrait + landscape] ==
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px), 
+// @media only screen and (max-device-width: 480px) 
+
+//@media all and (orientation:portrait) Style adjustments for portrait mode goes here
+
+//@media all and (orientation:landscape) /* Style adjustments for landscape mode goes here */
+  
