@@ -1,6 +1,6 @@
 This template is based on a template generated with Yeoman web app generator https://github.com/yeoman/generator-webapp
 
-All code not from other projects Copyright (C) 2012-2013 Herman Boomsma
+All code not from other projects Copyright (C) 2012-2013 Herman Boomsma, under the MIT-license unless otherwise noted.
 
 MIT license:
 
@@ -9,6 +9,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
 
 Quintus HTML5 Engine:
 Copyright (c) 2011 Cykod LLC, http://coderdeck.com/
@@ -33,16 +35,20 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+
+
 The Quintus platform demo Copyright (C) 2012-2013 Cykod LLC
+
+
 
 
 Big parts come from other projects:
 
-.htaccess and crossdomain.xml come from HTML5 Boilerplate
+.htaccess comes from HTML5 Boilerplate
 _typography.sass.css is based on typography code from HTML5 Boilerplate
 modifications copyright 2012 - 2013 Herman Boomsma under the same license
 
-index.html.erb and accompanying layouts (/layouts) are loosely based on the HTML5 Boilerplate
+index.html is based on the HTML5 Boilerplate.
 
 Copyright (c) HTML5 Boilerplate
 
@@ -89,8 +95,5 @@ modifications copyright 2012 - 2013 Herman Boomsma under the same license
 _normalize.sass.css
 v1.0.1 | MIT License | git.io/normalize
 
-
-
-
- 
+IF YOU SHOULD'VE BEEN MENTIONED OR DON'T WANT YOUR CODE TO BE IN THIS PROJECT, PLEASE CONTACT ME AT HARMUS*AT*GMAIL*DOT*COM AND IT'LL BE RESOLVED AS SOON AS POSSIBLE.
  
