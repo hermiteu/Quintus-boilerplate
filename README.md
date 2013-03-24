@@ -14,6 +14,7 @@ Steps:
 		cd the_name_of_the_game
 		npm install
 		bower update #optional, you need Bower
+		sh update_quintus.sh #download Quintus manually, until it is a Bower component
 		mate . #if you use TextMate
 		grunt server #the game will open in your favourite browser and grunt is watching for changes
 
