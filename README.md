@@ -6,7 +6,11 @@ Quintus boilerplate template based on Yeoman's web app template. Comes with HTML
 Getting started
 ---------------
 
-You need Node & Grunt. Use Bower to update or add components.
+You need Node & NPM. 
+
+Optionally use Bower to update or add components. To install Bower:
+
+    npm install -g bower
 
 Steps:
 
