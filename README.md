@@ -5,19 +5,18 @@ Quintus boilerplate template based on Yeoman's web app template. Comes with HTML
 
 Getting started
 ---------------
-
+ 
 You need Node & NPM. 
 
-Optionally use Bower to update or add components. To install Bower:
+Compass and Susy need to be installed, this dependency will be removed later.
 
-    npm install -g bower
+	gem install compass susy
 
 Steps:
 
 		git clone https://github.com/hermiteu/Quintus-boilerplate.git the_name_of_the_game
 		cd the_name_of_the_game
 		npm install
-		bower update #optional, you need Bower
 		sh update_quintus.sh #download Quintus manually, until it is a Bower component
 		mate . #if you use TextMate
 		grunt server #the game will open in your favourite browser and grunt is watching for changes
@@ -45,4 +44,4 @@ Todo
 * turn into Yeoman generator when Yeoman gets out of beta
 * look into responsive/scaling canvas
 * automatic favicon generation in different sizes
-* handlebar templates / partials / when grunt-handlebars-static becomes stable
+* handlebar templates / partials
