@@ -1,22 +1,3 @@
-/* design as background
- * comment this part out when you're ready  
- */
-
-// body
-  //background: url('images/design.png')
-  // background-position: center 0px
-  // background-repeat: no-repeat
-  // opacity: 1.0
-  
-/* opaqify elements while aligning with design background
- */
-//#div, nav, header, article, footer, ul, li, span
-  //opacity: 0.7
-
-/* end design as background
- * comment this part out when you're ready
- */   
-
 @import base
 
 html, body
@@ -71,24 +52,7 @@ body
   position: relative
   +at-breakpoint($mlDesktop)
     margin-bottom: 10px
-  
-  h1
-    color: #bc0f1a
-    font-weight: normal
-    font-size: 14px
-  h2
-    font-weight: bold
-    line-height: normal
-    margin-bottom: 0
-    color: #3D4E65 
-    font-size: 16px
-  p
-    //letter-spacing: 0.40px
-  .continue_reading_link, .read_more
-    color: #bc0f1a
-    text-decoration: underline
-    .right_arrow 
-      display: none 
+
   
 #content
   +prefix(1)
@@ -124,7 +88,7 @@ body
     
   /* quintus container */  
   #quintus_container
-
+    /* set width/height to zoom */
 
 #sidebar_primary
   +prefix(1)

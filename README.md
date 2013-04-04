@@ -8,6 +8,10 @@ Getting started
  
 You need Node & NPM. 
 
+Install Bower globally if it's not installed:
+
+	npm install -g bower
+
 Compass and Susy need to be installed, this dependency will be removed later.
 
 	gem install compass susy
@@ -16,8 +20,7 @@ Steps:
 
 		git clone https://github.com/hermiteu/Quintus-boilerplate.git the_name_of_the_game
 		cd the_name_of_the_game
-		npm install
-		sh update_quintus.sh #download Quintus manually, until it is a Bower component
+		npm install && bower install
 		mate . #if you use TextMate
 		grunt server #the game will open in your favourite browser and grunt is watching for changes
 
@@ -34,14 +37,17 @@ Run:
 		
 There you go! Your game has been built to *dist/* with concatenated and compressed assets.
 
+Updating components
+----------
+
+Updating Quintus and other components:
+
+	bower update
+
 Todo
 ----
 
 * Install https://github.com/cykod/Spriter locally
-* Switch to Stylus/Nib or libsass/Bourbon/Neat to remove Ruby/Compass dependency and gain speed
-* Install/update Quintus as a Bower component
 * Improve documentation
 * turn into Yeoman generator when Yeoman gets out of beta
-* look into responsive/scaling canvas
-* automatic favicon generation in different sizes
-* handlebar templates / partials
+* handlebar or jade templates / partials
