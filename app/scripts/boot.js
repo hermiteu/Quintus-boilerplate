@@ -6,8 +6,7 @@ window.Q = Quintus({
 .include("Sprites, Scenes, Input, 2D, Touch, UI, Anim");
 
 Q.setup({
-  //maximize: "touch"
-  maximize: false
+  maximize: "touch"
 });
 
 Q.touch(Q.SPRITE_ALL);
