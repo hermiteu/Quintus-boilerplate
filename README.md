@@ -17,13 +17,14 @@ Compass and Susy need to be installed, this dependency will be removed later.
 	gem install compass susy
 
 Steps:
-
+```
 	git clone https://github.com/hermiteu/Quintus-boilerplate.git the_name_of_the_game
 	cd the_name_of_the_game
 	npm install && bower install
-
+```
+```
 	grunt server 
-  
+```  
 opens the desktop version in your browser for development, open /mobile.html in a mobile emulator to work on the mobile version. LiveReload works in both.
 
 To use Compass you need to install the Ruby gem. Just remove the .sass files and create main.css to use plain CSS.
