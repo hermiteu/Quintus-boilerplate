@@ -24,10 +24,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            jade: {
-                files: ['<%= yeoman.app %>/{,*/}*.jade'],
-                tasks: ['jade']
-            },          
             coffee: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
@@ -42,7 +38,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 files: [
-                    '.tmp/*.html', //changed to .tmp for jade
+                    '<%= yeoman.app %>/*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,webp}'
@@ -107,23 +103,6 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        jade: {
-            dist: {
-                options: {
-                    pretty: true,
-                    data: {
-                      /* properties you add to this array are available as variables in Jade templates */
-                    }
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '.tmp',
-                    src: '*.jade',
-                    ext: '.html'
-                }]
-            }
-        },
         mocha: {
             all: {
                 options: {
@@ -153,6 +132,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        jade: {
+            dist: {
+                options: {
+                    pretty: true,
+                    data: {
+                      /* properties you add to this array are available as variables in Jade templates */
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.app %>', //this is a temporary fix, should go to .tmp
+                    src: '*.jade',
+                    ext: '.html'
+                }]
+            }
+        },
         compass: {
             options: {
                 require: 'susy',              
@@ -178,13 +174,13 @@ module.exports = function (grunt) {
             dist: {}
         },*/
         useminPrepare: {
-            html: '.tmp/index.html',
+            html: '<%= yeoman.app %>/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
-            html: ['.tmp/{,*/}*.html'],
+            html: ['<%= yeoman.dist %>/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -225,7 +221,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '.tmp',
+                    cwd: '<%= yeoman.app %>',
                     src: '*.html',
                     dest: '<%= yeoman.dist %>'
                 }]
@@ -290,12 +286,12 @@ module.exports = function (grunt) {
         'jade',
         'useminPrepare',
         'imagemin',
+        'htmlmin',
         'concat',
         'cssmin',
         'uglify',
         'copy',
-        'usemin',
-        'htmlmin'   
+        'usemin'
     ]);
 
     grunt.registerTask('default', [
