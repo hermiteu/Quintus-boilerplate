@@ -112,9 +112,7 @@ module.exports = function (grunt) {
                 options: {
                     pretty: true,
                     data: {
-                      //grunt can read json files grunt.read.JSON or something like that
-                      //if this test works you can use data in jade templates!
-                      test_value: "boo didgeridoo, het werkt yoohoohoo. template data in JSON formaat. Woojoejoe."
+                      /* properties you add to this array are available as variables in Jade templates */
                     }
                 },
                 files: [{
@@ -213,10 +211,6 @@ module.exports = function (grunt) {
             }
         },
         htmlmin: {
-          
-            /* hier zit het probleem van .html niet in dist/ */
-            /* heeft met volgorde htmlmin en usemin te maken */
-            
             dist: {
                 options: {
                     /*removeCommentsFromCDATA: true,
@@ -230,8 +224,6 @@ module.exports = function (grunt) {
                     removeOptionalTags: true*/
                 },
                 files: [{
-                    //expand: true //was het
-                    //expand: false geeft bruikbare foutmeldingen
                     expand: true,
                     cwd: '.tmp',
                     src: '*.html',
@@ -303,7 +295,6 @@ module.exports = function (grunt) {
         'uglify',
         'copy',
         'usemin',
-        /* usemin na htmlmin? */
         'htmlmin'   
     ]);
 

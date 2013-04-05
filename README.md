@@ -24,7 +24,7 @@ Steps:
 	mate . #if you use TextMate
 	grunt server #the game will open in your favourite browser and grunt is watching for changes
 
-This is a working prototype, it has only been tested on OS X Mountain Lion. Please submit your reports if there are problems on other OS'es.
+This was tested on OS X Mountain Lion. Please let me know if there are problems on other OS'es.
 
 To use Compass you need to install the Ruby gem. Just remove the .sass files and create main.css to use plain CSS.
 
@@ -50,4 +50,4 @@ Todo
 * Install https://github.com/cykod/Spriter locally
 * Improve documentation
 * turn into Yeoman generator when Yeoman gets out of beta
-* handlebar or jade templates / partials
+* add mobile.jade template based upon H5 Mobile Boilerplate
