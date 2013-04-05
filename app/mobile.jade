@@ -1,0 +1,14 @@
+extends layouts/mobile
+
+block meta
+  title index page
+  meta(name='description', content='')  
+  meta(name='keywords', content='')
+  
+block content
+  #loading
+    #loading_container
+      | Loading...
+      #loading_progress
+      
+  canvas#quintus(tabindex='0', width='320', height='480')

@@ -1,0 +1,66 @@
+!!! 5
+html.no-js
+  head
+    meta(charset='utf-8')
+    block meta
+    link(rel='stylesheet', href='styles/main.css')
+    
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='cleartype', content='on')
+    //- these icons will be generated automatically in coming versions based on a single 144x144 icon
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='images/touch/apple-touch-icon-144x144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='images/touch/apple-touch-icon-114x114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='images/touch/apple-touch-icon-72x72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='images/touch/apple-touch-icon-57x57-precomposed.png')
+    link(rel='shortcut icon', href='images/touch/apple-touch-icon.png')
+    //- Tile icon for Win8 (144x144 + tile color)
+    meta(name='msapplication-TileImage', content='images/touch/apple-touch-icon-144x144-precomposed.png')
+    meta(name='msapplication-TileColor', content='#222222')
+    //- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94
+    //-
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="apple-mobile-web-app-title" content="">     
+    
+    // build:js scripts/head.js
+    script(src='scripts/libs/modernizr-2.6.2.min.js')    
+    script(src='scripts/head.js')
+    // endbuild
+    
+  body
+    //if IEMobile 7
+      <div class="iem7">
+
+    #content.typography(role='main')
+      block content
+    // /content
+
+    //if IEMobile 7
+      </div>    
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script
+      var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+      s.parentNode.insertBefore(g,s)}(document,"script"));
+      
+    // build:js scripts/main.js
+    script(src='scripts/libs/mbp-helper.js') //- mobile boilerplate helper functions
+    script(src='components/quintus/lib/quintus.js')
+    script(src='components/quintus/lib/quintus_sprites.js')
+    script(src='components/quintus/lib/quintus_scenes.js')
+    script(src='components/quintus/lib/quintus_input.js')
+    script(src='components/quintus/lib/quintus_2d.js')
+    script(src='components/quintus/lib/quintus_anim.js')
+    script(src='components/quintus/lib/quintus_audio.js')
+    script(src='components/quintus/lib/quintus_touch.js')
+    script(src='components/quintus/lib/quintus_ui.js')
+    script(src='scripts/boot.js')
+    script(src='scripts/components.js')
+    script(src='scripts/sprites.js')
+    script(src='scripts/scenes.js')
+    script(src='scripts/main.js')
+    // endbuild
