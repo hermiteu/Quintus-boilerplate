@@ -36,6 +36,10 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
             },
+            jade: {
+                files: ['<%= yeoman.app %>/jade/{,*/}*.jade'],
+                tasks: ['jade']
+            },
             livereload: {
                 files: [
                     '<%= yeoman.app %>/*.html',
@@ -142,8 +146,8 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.app %>', //this is a temporary fix, should go to .tmp
+                    cwd: '<%= yeoman.app %>/jade',
+                    dest: '<%= yeoman.app %>',
                     src: '*.jade',
                     ext: '.html'
                 }]
