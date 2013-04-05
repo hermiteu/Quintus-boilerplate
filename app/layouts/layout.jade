@@ -1,0 +1,65 @@
+!!! 5
+html.no-js(dir="ltr",lang="nl-NL")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    block meta
+    meta(name='viewport', content='width=device-width')
+    //- Place favicon.ico and apple-touch-icon.png in the root directory
+    link(rel='stylesheet', href='styles/main.css')
+    
+    // build:js scripts/head.js
+    script(src='scripts/head.js')
+    script(src='scripts/libs/modernizr-2.6.2.min.js')
+    // endbuild
+    
+  body
+    #page.hfeed
+      header#branding(role='banner')
+        block header
+      // /header
+      #main.canvas(role='main')
+        #content.typography
+          block content
+        // /content
+        section#sidebar_primary.sidebar(role='complementary')
+          block sidebar
+        // /sidebar
+      // /main
+      footer#footer(role='contentinfo')
+        block footer
+    // /page
+    
+    //if lt IE 9
+      p.chromeframe
+        | You are using an
+        strong outdated
+        | browser. Please
+        a(href='http://browsehappy.com/') upgrade your browser
+        | or
+        a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
+        | to improve your experience.
+        
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+    // build:js scripts/main.js
+    script(src='components/quintus/lib/quintus.js')
+    script(src='components/quintus/lib/quintus_sprites.js')
+    script(src='components/quintus/lib/quintus_scenes.js')
+    script(src='components/quintus/lib/quintus_input.js')
+    script(src='components/quintus/lib/quintus_2d.js')
+    script(src='components/quintus/lib/quintus_anim.js')
+    script(src='components/quintus/lib/quintus_audio.js')
+    script(src='components/quintus/lib/quintus_touch.js')
+    script(src='components/quintus/lib/quintus_ui.js')
+    script(src='scripts/boot.js')
+    script(src='scripts/components.js')
+    script(src='scripts/sprites.js')
+    script(src='scripts/scenes.js')
+    script(src='scripts/main.js')
+    // endbuild

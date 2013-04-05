@@ -24,6 +24,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
+            jade: {
+                files: ['<%= yeoman.app %>/*.jade'],
+                tasks: ['jade']
+            },          
             coffee: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
                 tasks: ['coffee:dist']
@@ -38,7 +42,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 files: [
-                    '<%= yeoman.app %>/*.html',
+                    '.tmp/*.html', //changed to .tmp for jade
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,webp}'
@@ -103,6 +107,25 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
+        jade: {
+            dist: {
+                options: {
+                    pretty: true,
+                    data: {
+                      //grunt can read json files grunt.read.JSON or something like that
+                      //if this test works you can use data in jade templates!
+                      test_value: "boo didgeridoo, het werkt yoohoohoo. template data in JSON formaat. Woojoejoe."
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '.tmp',
+                    src: '*.jade',
+                    ext: '.html'
+                }]
+            }
+        },
         mocha: {
             all: {
                 options: {
@@ -157,13 +180,13 @@ module.exports = function (grunt) {
             dist: {}
         },*/
         useminPrepare: {
-            html: '<%= yeoman.app %>/index.html',
+            html: '.tmp/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
+            html: ['.tmp/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
             options: {
                 dirs: ['<%= yeoman.dist %>']
@@ -190,6 +213,10 @@ module.exports = function (grunt) {
             }
         },
         htmlmin: {
+          
+            /* hier zit het probleem van .html niet in dist/ */
+            /* heeft met volgorde htmlmin en usemin te maken */
+            
             dist: {
                 options: {
                     /*removeCommentsFromCDATA: true,
@@ -203,8 +230,10 @@ module.exports = function (grunt) {
                     removeOptionalTags: true*/
                 },
                 files: [{
+                    //expand: true //was het
+                    //expand: false geeft bruikbare foutmeldingen
                     expand: true,
-                    cwd: '<%= yeoman.app %>',
+                    cwd: '.tmp',
                     src: '*.html',
                     dest: '<%= yeoman.dist %>'
                 }]
@@ -246,6 +275,7 @@ module.exports = function (grunt) {
             'clean:server',
             'coffee:dist',
             'compass:server',
+            'jade',
             'livereload-start',
             'connect:livereload',
             'open',
@@ -265,14 +295,16 @@ module.exports = function (grunt) {
         'clean:dist',
         'coffee',
         'compass:dist',
+        'jade',
         'useminPrepare',
         'imagemin',
-        'htmlmin',
         'concat',
         'cssmin',
         'uglify',
         'copy',
-        'usemin'
+        'usemin',
+        /* usemin na htmlmin? */
+        'htmlmin'   
     ]);
 
     grunt.registerTask('default', [

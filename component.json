@@ -4,7 +4,7 @@
   "dependencies": {
     "zepto": "~1.0.0rc1",
     "underscore": "~1.4.4",
-    "quintus": "~0.1.0"
+    "quintus": "~0.1.0"    
   },
   "devDependencies": {}
 }
