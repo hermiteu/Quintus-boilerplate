@@ -6,15 +6,15 @@ Quintus boilerplate template based on Yeoman's web app template. Comes with HTML
 Getting started
 ---------------
  
-You need Node & NPM. 
+You need Node & Ruby. 
 
-Install Bower globally if it's not installed:
+Install Bower and Grunt globally:
 
-	npm install -g bower
+	(sudo) npm install -g grunt-cli bower
 
 Compass and Susy need to be installed, this dependency will be removed later.
 
-	gem install compass susy
+	(sudo) gem install compass susy
 
 Steps:
 ```
