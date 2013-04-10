@@ -11,6 +11,7 @@ block header
       h1 Title
   
 block content
+
   p.doc
     a(href='http://html5quintus.com/guide/intro.md', target='_blank') Read Online Documentation
 
@@ -18,7 +19,9 @@ block content
     #loading_container
       | Loading...
       #loading_progress
+      
   canvas#quintus(tabindex='0', width='600', height='450')
+    p Your browser does not support the <canvas> element!  
   
 
 block sidebar
