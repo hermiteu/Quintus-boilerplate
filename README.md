@@ -51,8 +51,10 @@ Notes
 Until this is a Yeoman generator, some things need to be done manually.
 
 Change the app name in package.json and add the private tag:
+```
 	"name": "the name of the game",
 	"private": "true"
+```
 
 Edit component.json and see if you need Zepto and/or Underscore.
 
