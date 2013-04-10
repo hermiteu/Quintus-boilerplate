@@ -59,8 +59,9 @@ Change the app name in package.json and add the private tag:
 Edit component.json and see if you need Zepto and/or Underscore.
 
 Init as a new Git repo:
-	rm -Rf .git/ && git init && git add . && git commit -m 'first commit'
-
+```
+rm -Rf .git/ && git init && git add . && git commit -m 'first commit'
+```
 
 Todo
 ----
