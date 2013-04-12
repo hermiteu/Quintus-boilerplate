@@ -1,7 +1,16 @@
 Quintus boilerplate
 ===================
 
-Quintus boilerplate template based on Yeoman's web app template. Comes with HTML5 Boilerplate, Sass & Susy, compass sprites, LiveReload, optional Coffeescript.
+Quintus boilerplate template based on Yeoman's web app template. Comes with HTML5 Boilerplate and these things (all optional):
+
++ Sass & Susy
++ Jade
++ Compass sprites
++ LiveReload
++ Coffeescript
+
+This is what the Yeoman Quintus Generator will generate. The generator isn't finished yet. See Notes at the bottom.
+
 
 Getting started
 ---------------
@@ -21,6 +30,7 @@ Steps:
 git clone https://github.com/hermiteu/Quintus-boilerplate.git the_name_of_the_game
 cd the_name_of_the_game
 npm install && bower install
+subl .
 ```
 ```
 grunt server
@@ -62,6 +72,8 @@ Init as a new Git repo:
 ```
 rm -Rf .git/ && git init && git add . && git commit -m 'first commit'
 ```
+
+If you don't want to use Jade don't edit the files in app/jade because the changes will be written to the HTML files with the same name.
 
 Todo
 ----
